@@ -1,0 +1,77 @@
+2026-01-17 22:14:45,762 - INFO - Initializing ChromaDB Embedding Pipeline...
+2026-01-17 22:14:46,803 - INFO - Starting text data processing with update mode: replace
+2026-01-17 22:14:46,804 - INFO - Scanning directory: data\cv
+2026-01-17 22:14:46,804 - INFO - Found 1 text files in cv
+2026-01-17 22:14:46,804 - INFO - Scanning directory: data\interview_qa
+2026-01-17 22:14:46,805 - INFO - Found 1 text files in interview_qa
+2026-01-17 22:14:46,805 - INFO - Scanning directory: data\projects
+2026-01-17 22:14:46,805 - INFO - Found 0 text files in projects
+2026-01-17 22:14:46,805 - INFO - Scanning directory: data\behavioral
+2026-01-17 22:14:46,806 - INFO - Found 0 text files in behavioral
+2026-01-17 22:14:46,806 - INFO - Scanning directory: data\notes
+2026-01-17 22:14:46,806 - INFO - Found 0 text files in notes
+2026-01-17 22:14:46,806 - INFO - Total text files to process: 2
+2026-01-17 22:14:46,806 - INFO - Files by mission:
+2026-01-17 22:14:46,806 - INFO -   cv: 1 files
+2026-01-17 22:14:46,807 - INFO -   interview_qa: 1 files
+2026-01-17 22:14:46,821 - INFO - No documents found matching source pattern: devops
+2026-01-17 22:14:47,977 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:48,291 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:48,556 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:49,602 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:50,003 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:50,229 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:50,451 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:50,729 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:50,984 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:51,489 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:51,678 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:51,711 - INFO - No documents found matching source pattern: micra_devops
+2026-01-17 22:14:51,895 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:52,144 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:52,334 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:52,548 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:52,824 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:53,033 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:53,238 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:53,544 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:53,885 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:54,125 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:54,335 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:54,565 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:54,765 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:55,215 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:55,445 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:55,725 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:56,004 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:56,235 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:56,545 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:56,765 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:57,005 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:57,335 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:57,595 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:57,806 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:58,045 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:58,255 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:58,495 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:58,744 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-17 22:14:58,757 - INFO - ============================================================
+2026-01-17 22:14:58,757 - INFO - PROCESSING COMPLETE
+2026-01-17 22:14:58,757 - INFO - ============================================================
+2026-01-17 22:14:58,759 - INFO - Files processed: 2
+2026-01-17 22:14:58,759 - INFO - Total chunks created: 39
+2026-01-17 22:14:58,759 - INFO - Documents added to collection: 39
+2026-01-17 22:14:58,759 - INFO - Documents updated in collection: 0
+2026-01-17 22:14:58,759 - INFO - Documents skipped (already exist): 0
+2026-01-17 22:14:58,759 - INFO - Errors: 0
+2026-01-17 22:14:58,760 - INFO - Processing time: 11.95 seconds
+2026-01-17 22:14:58,760 - INFO - 
+Mission breakdown:
+2026-01-17 22:14:58,760 - INFO -   cv: 1 files, 11 chunks
+2026-01-17 22:14:58,760 - INFO -     Added: 11, Updated: 0, Skipped: 0
+2026-01-17 22:14:58,760 - INFO -   interview_qa: 1 files, 28 chunks
+2026-01-17 22:14:58,760 - INFO -     Added: 28, Updated: 0, Skipped: 0
+2026-01-17 22:14:58,762 - INFO - 
+Collection: interview_coach
+2026-01-17 22:14:58,762 - INFO - Total documents in collection: 39
+2026-01-17 22:14:58,762 - INFO - Pipeline completed successfully!

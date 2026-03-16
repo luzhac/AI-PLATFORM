@@ -1,0 +1,200 @@
+I will interview you on:
+DevOps fundamentals: CI/CD, containerization, cloud
+Infrastructure as Code and automation
+AI training support and prompt engineering
+Cross-functional collaboration, mentorship, and communication
+Cloud platform proficiency and certifications
+Please don't refresh the page or you'll lose the progress.
+
+Q1: “Great duo! To start simple, what does a CI/CD pipeline mean to you, and why is it important in modern software development?”
+Your Answer:
+ For me, a CI/CD pipeline is something I implement using GitHub Actions.
+ It includes running tests, building the Docker image, pushing the image to ECR, and deploying it.
+ It is important because it standardizes the entire software development process.
+ It ensures stability, speed, and reliability, and helps multiple engineers collaborate effectively.
+Correct Answer:
+ A CI/CD pipeline automates how code is built, tested, and deployed.
+ CI validates code quality through automated testing, ensuring every change is safe.
+ CD delivers artifacts to production reliably and consistently, reducing manual error and speeding up delivery cycles.
+
+Q2: “How do you separate CI from CD, both in process and tooling?”
+Your Answer:
+ The main difference is that CI does not include deployment, while CD focuses only on deployment.
+ CI handles building, testing, linting, and code checks.
+ CD handles shipping the build artifact to production or staging.
+Correct Answer:
+ CI focuses on code validation—build, test, lint, and quality checks.
+ CD handles automated deployments with approvals, rollbacks, and environment promotion.
+ They serve different goals but work together to ensure fast and reliable releases.
+
+Q3: “How would you design a robust CI pipeline for multiple microservices and shared libraries?”
+Your Answer:
+ I haven’t deeply thought about this scenario before.
+ But my first idea is to separate CI for different repositories into different YAML workflow files.
+ Each repo should have its own CI workflow.
+Correct Answer:
+ Each microservice gets an isolated CI workflow.
+ Shared libraries trigger dependent service pipelines using path filters or workflow dispatch events.
+ Common CI steps are extracted into reusable GitHub Actions to avoid duplication and ensure consistency.
+
+Q4: “How would you structure workflows and triggers to avoid unnecessary CI runs?”
+Your Answer:
+ You can configure conditions and filters — for example, use if: logic or path filters to run workflows only when relevant files change.
+Correct Answer:
+ Use paths and paths-ignore to limit triggers.
+ Use conditional logic to skip jobs based on branch, commit message, or file changes.
+ Move repeated logic into composite actions to keep pipelines DRY and maintainable.
+
+Q5: “What are the main benefits of containerizing applications compared to running them on VMs?”
+Your Answer:
+ Easier deployment, no OS configuration needed, consistent environments, standardization, portability.
+Correct Answer:
+ Containers package the application and its dependencies so they run identically everywhere.
+ They start quickly, scale easily, and eliminate configuration drift.
+ They integrate with orchestration tools like Kubernetes for automated scaling and resilience.
+
+Q6: “Terraform vs Ansible?”
+Your Answer:
+ Terraform provisions AWS resources like EC2, EKS, VPC.
+ Ansible configures servers and installs packages.
+Correct Answer:
+ Terraform is declarative and manages cloud resources with state, ideal for infrastructure provisioning.
+ Ansible is procedural and ideal for post-provision configuration and runtime setup.
+ They complement each other in full automation workflows.
+
+Q7: “How do you structure Terraform for multiple environments?”
+Your Answer:
+ Divide environments into separate directories.
+ Create modules for VPC, EC2, EKS, etc.
+ Each environment consumes the shared modules.
+Correct Answer:
+ Use reusable modules for all components.
+ Use environment folders (dev/staging/prod) with separate variable sets and remote state files.
+ This keeps code reusable while maintaining isolated lifecycle per environment.
+
+Q8: “How do you handle secrets in Terraform and Ansible?”
+Your Answer:
+ Never store passwords in code. Use environment variables.
+Correct Answer:
+ Store secrets in AWS Secrets Manager or SSM Parameter Store and reference them using IAM least privilege.
+ Avoid embedding secrets in code, variables, or state files.
+
+Q9: “How do you ensure Terraform safely goes through CI/CD with approvals?”
+Your Answer:
+ Add an approval step before production apply.
+Correct Answer:
+ CI runs fmt, validate, and plan.
+ A manual approval gate is required before apply, and only restricted IAM roles can execute production changes.
+ This ensures safety, auditability, and controlled deployments.
+
+Q10: “How do you prevent accidental destructive Terraform changes?”
+Your Answer:
+ Some critical resources should not be deletable.
+Correct Answer:
+ Use lifecycle { prevent_destroy = true } for VPC, RDS, subnets, or other critical components.
+ Use mandatory code reviews and automated terraform plan checks.
+ Use remote state locking to prevent concurrent modifications.
+
+Q11: “Difference between prompt design and prompt evaluation?”
+Your Answer:
+ Prompt design is creating prompts for specific tasks.
+ Prompt evaluation is reviewing or testing them by running them.
+Correct Answer:
+ Prompt design focuses on shaping instructions to influence model behavior.
+ Prompt evaluation measures accuracy, consistency, safety, and robustness of outputs.
+ Evaluation verifies whether a prompt generalizes across diverse scenarios.
+
+Q12: “What metrics do you collect to evaluate prompts?”
+Your Answer:
+ Correctness, instruction-following, grammar, length.
+Correct Answer:
+ I score prompts based on accuracy, reasoning quality, constraint adherence, stability across variations, and robustness to edge cases.
+ Quantitative scoring helps compare multiple prompt versions objectively.
+
+Q13: “Difference between prompt engineering and data curation?”
+Your Answer:
+ If data is wrong, everything is wrong.
+Correct Answer:
+ Data curation ensures the model trains on clean, correct, representative examples.
+ Prompt engineering controls the interaction layer—how the model interprets tasks.
+ Prompts cannot compensate for poor data; curation is foundational.
+
+Q14: “Explain to a PM why data curation is essential before prompt engineering.”
+Your Answer:
+ If the data is not correct, everything based on it fails.
+Correct Answer:
+ Models learn patterns from data, so incorrect or noisy data leads to unreliable behavior.
+ Good curation reduces model errors and decreases iteration cost.
+ It is the foundation for any successful AI system.
+
+Q15: “How do you give constructive feedback to the data team?”
+Your Answer:
+ Explain issues like missing values or outliers.
+Correct Answer:
+ I present factual observations, explain the model impact, and suggest collaborative solutions.
+ I focus on shared goals and avoid blame to maintain a positive working relationship.
+
+Q16: “How do you coach an engineer to write clearer status updates?”
+Your Answer:
+ Tell her to write problem, location, improvements, and result.
+Correct Answer:
+ I teach them to structure updates as:
+Issue
+
+
+Impact
+
+
+Next steps
+ Short, structured communication improves alignment across teams.
+
+
+
+Q17: “How would you de-escalate a tense cross-functional meeting?”
+Your Answer:
+ (You started but didn’t finish.)
+Correct Answer:
+ I acknowledge both sides—timeline pressure and reliability concerns.
+ I present clear options with trade-offs, aligning the team on the safest feasible plan.
+ Transparent communication reduces tension and builds trust.
+
+Q18: “How do you use CloudWatch / monitoring tools for reliability?”
+Your Answer:
+ Send metrics and logs to CloudWatch; monitor disk usage; ship logs.
+Correct Answer:
+ I centralize logs, metrics, and traces.
+ Set alerts on latency, error rates, resource usage, and business KPIs.
+ Dashboards and alert workflows ensure fast incident response.
+
+Q19: “Compare AWS, Azure, and GCP for container workloads.”
+Your Answer:
+ Technology same; difference is control plane and pricing.
+Correct Answer:
+ All provide mature managed Kubernetes.
+ AWS offers the richest ecosystem; Azure is cost-efficient; GCP excels in networking and developer experience.
+ Choice depends on cost, integration needs, and compliance.
+
+Q20: “Which cloud certifications are most valuable?”
+Your Answer:
+ AWS DOP is useful and scenario-based.
+Correct Answer:
+ Certifications like AWS DevOps Pro and CKA validate hands-on skills in automation, troubleshooting, and production operations.
+ They demonstrate real-world capability beyond theoretical knowledge.
+
+Q21: “How do you design HA for a multi-tier app?”
+Your Answer:
+ Deploy across multiple AZs.
+Correct Answer:
+ Distribute components across AZs with load balancers and auto-scaling.
+ Use stateless services and health checks.
+ Ensure each tier can automatically recover from failures.
+
+Q22: “How do you design HA for databases, caches, and storage?”
+Your Answer:
+ Use multi-AZ DB; same for cache; use S3.
+Correct Answer:
+ Use Multi-AZ RDS with automatic failover for databases.
+ Use Redis cluster mode with replicas for caching.
+ Use S3, which is inherently Multi-AZ with 11-nines durability, for storage.
+
+
